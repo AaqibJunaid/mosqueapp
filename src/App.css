@@ -124,8 +124,7 @@ body {
   display: flex;
   width:15vw;
   height:23vh;
-  /* background-color:darkslategray; */
-  background-color:yellow;
+  background-color:darkslategray;
   flex-direction: column;
   align-items: center;
   justify-content: center;
