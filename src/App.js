@@ -146,6 +146,7 @@ export default class MainApp extends Component {
       minutes = now.getMinutes()
     }
 
+    console.log(currentDynamicArea)
     if (this.state.currentDynamicArea == 'ClockDate'){
       document.getElementById('NextPrayerArea').style.display='none'
       document.getElementById('DateTimeArea').style.display='flex'
@@ -228,8 +229,6 @@ export default class MainApp extends Component {
     
         var hours = Math.floor(timeDiff / (1000 * 60 * 60));
 
-        console.log(hours)
-
         if (hours > 0){
           currentPrayer={'Name':'PastSunrise','Index':i}
         }
@@ -251,7 +250,6 @@ export default class MainApp extends Component {
           nextTime = new Date(now.toDateString() + ' ' + times[this.state.PrayerNames[i+1]+ ' Start'])
         }
         else if(this.state.PrayerNames[i]=='Isha'){
-          console.log('isha')
           currentPrayer={'Name':this.state.PrayerNames[i],'Index':i}
           break;
         }
@@ -336,7 +334,6 @@ export default class MainApp extends Component {
           break;
         }
         if(this.state.PrayerNames[i]=='Isha'&&nextPrayerTime==undefined){
-          console.log('hello not isha')
           const today = new Date()
           const tomorrow = new Date(today)
           tomorrow.setDate(tomorrow.getDate() + 1)
@@ -347,9 +344,9 @@ export default class MainApp extends Component {
           }
 
           var tomorrowDate=tomorrow.getDate()+'/'+month+'/'+tomorrow.getFullYear()
-          console.log(tomorrowDate)
+   
           var tomorrowTimes=mosqueTimes.filter( element => element.Date == tomorrowDate)[0]
-          console.log(tomorrowTimes['Fajr Start'])
+
           var tomorrowPrayer =new Date(tomorrow.toDateString() + ' ' + tomorrowTimes['Fajr Start']);
           nextPrayerTime = {'Name':'Fajr','Type':'Prayer','Time':tomorrowPrayer};
         }
