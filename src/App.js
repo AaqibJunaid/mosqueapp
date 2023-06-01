@@ -147,6 +147,7 @@ export default class MainApp extends Component {
     }
 
     console.log(this.state.currentDynamicArea)
+    console.log(this.dynamicSwitchCounter)
     if (this.state.currentDynamicArea == 'ClockDate'){
       document.getElementById('NextPrayerArea').style.display='none'
       document.getElementById('DateTimeArea').style.display='flex'
