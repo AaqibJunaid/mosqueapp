@@ -146,7 +146,7 @@ export default class MainApp extends Component {
       minutes = now.getMinutes()
     }
 
-    console.log(currentDynamicArea)
+    console.log(this.state.currentDynamicArea)
     if (this.state.currentDynamicArea == 'ClockDate'){
       document.getElementById('NextPrayerArea').style.display='none'
       document.getElementById('DateTimeArea').style.display='flex'
