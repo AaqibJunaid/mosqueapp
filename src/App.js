@@ -160,7 +160,7 @@ export default class MainApp extends Component {
       document.getElementById('Date').innerText=this.getLongDate()
       document.getElementById('Date').style.fontSize='1.7vw'
       // }
-      this.setState({dynamicSwitchCounter:this.state.dynamicSwitchCounter++})
+      this.setState({dynamicSwitchCounter:this.state.dynamicSwitchCounter+1})
       //will force switch to prayer countdown if needed
       this.nextPrayerTimeDifference(this.getNextPrayerTime(todayTimes))
     }
@@ -182,7 +182,7 @@ export default class MainApp extends Component {
       // else{
         this.updateNextPrayer(this.getNextPrayerTime(todayTimes))
       // }
-      this.setState({dynamicSwitchCounter:this.state.dynamicSwitchCounter++})
+      this.setState({dynamicSwitchCounter:this.state.dynamicSwitchCounter+1})
     }
 
     
