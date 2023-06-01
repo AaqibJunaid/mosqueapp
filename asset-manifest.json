@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/mosqueapp/static/css/main.448fe967.css",
-    "main.js": "/mosqueapp/static/js/main.c1a36ccc.js",
+    "main.js": "/mosqueapp/static/js/main.a0329fed.js",
     "static/js/787.563082bc.chunk.js": "/mosqueapp/static/js/787.563082bc.chunk.js",
     "static/media/MainVideoDashboard.mp4": "/mosqueapp/static/media/MainVideoDashboard.4b2bebd407a225214996.mp4",
     "static/media/SideBarWebsite.png": "/mosqueapp/static/media/SideBarWebsite.70de4abba827eceb19ae.png",
     "index.html": "/mosqueapp/index.html",
     "main.448fe967.css.map": "/mosqueapp/static/css/main.448fe967.css.map",
-    "main.c1a36ccc.js.map": "/mosqueapp/static/js/main.c1a36ccc.js.map",
+    "main.a0329fed.js.map": "/mosqueapp/static/js/main.a0329fed.js.map",
     "787.563082bc.chunk.js.map": "/mosqueapp/static/js/787.563082bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.448fe967.css",
-    "static/js/main.c1a36ccc.js"
+    "static/js/main.a0329fed.js"
   ]
 }
