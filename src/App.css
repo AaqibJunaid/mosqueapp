@@ -175,7 +175,7 @@ body {
   align-items: center;
   justify-content: center;
   border-style: solid;
-  border-radius: 20px;
+  border-radius: 11px;
   border-color: white;
   border-width: thin;
 }
@@ -233,7 +233,7 @@ body {
   justify-content: center;
   border-style: solid;
   border-color: white;
-  border-radius: 20px;
+  border-radius: 13px;
   border-width: thin;
 }
 .PrayerJamatText{
