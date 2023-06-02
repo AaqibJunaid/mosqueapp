@@ -439,7 +439,7 @@ export default class MainApp extends Component {
         <div id="Main">
           <div id="MainPanel">
             <div id="Top">
-             <video id='MainVideo' width="100%" height="99.5%" autoPlay={true} loop={true} muted={true}>
+             <video id='MainVideo' width="100%" height="99.5%" autoPlay="true" loop="true" muted="true">
                 <source src={MainDashboardVideo} type="video/mp4" />
             </video>
            </div>
