@@ -439,10 +439,10 @@ export default class MainApp extends Component {
         <div id="Main">
           <div id="MainPanel">
             <div id="Top">
-             {/* <video id='MainVideo' width="100%" height="99.5%" autoPlay="true" loop="true" muted="true">
-                <source src={MainDashboardVideo} type="video/mp4" /> */}
-            {/* </video> */}
-                <iframe id='MainVideo'width="100%" height="99.5%" src="https://www.youtube.com/embed/fVZU02czjas?&autoplay=1&controls=0&loop=1&mute=1&playlist=fVZU02czjas" frameBorder="0" allowFullScreen></iframe>
+             <video id='MainVideo' width="100%" height="99.5%" autoPlay="true" loop="true" muted="true">
+                <source src={MainDashboardVideo} type="video/mp4" />
+            </video>
+            {/* <iframe id='MainVideo'width="100%" height="99.5%" src="https://www.youtube.com/embed/fVZU02czjas?&autoplay=1&controls=0&loop=1&mute=1&playlist=fVZU02czjas" frameBorder="0" allowFullScreen></iframe> */}
            </div>
           <div id="Bottom">
             <div id="PrayerList">
