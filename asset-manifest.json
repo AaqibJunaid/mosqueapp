@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/mosqueapp/static/css/main.dc95039b.css",
-    "main.js": "/mosqueapp/static/js/main.a9271b7b.js",
+    "main.css": "/mosqueapp/static/css/main.33f190e1.css",
+    "main.js": "/mosqueapp/static/js/main.5d4c53f6.js",
     "static/js/787.563082bc.chunk.js": "/mosqueapp/static/js/787.563082bc.chunk.js",
     "static/media/MainVideoDashboard.mp4": "/mosqueapp/static/media/MainVideoDashboard.6971acd484f60dd4cf2b.mp4",
     "static/media/SideBarWebsite.png": "/mosqueapp/static/media/SideBarWebsite.70de4abba827eceb19ae.png",
     "index.html": "/mosqueapp/index.html",
-    "main.dc95039b.css.map": "/mosqueapp/static/css/main.dc95039b.css.map",
-    "main.a9271b7b.js.map": "/mosqueapp/static/js/main.a9271b7b.js.map",
+    "main.33f190e1.css.map": "/mosqueapp/static/css/main.33f190e1.css.map",
+    "main.5d4c53f6.js.map": "/mosqueapp/static/js/main.5d4c53f6.js.map",
     "787.563082bc.chunk.js.map": "/mosqueapp/static/js/787.563082bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc95039b.css",
-    "static/js/main.a9271b7b.js"
+    "static/css/main.33f190e1.css",
+    "static/js/main.5d4c53f6.js"
   ]
 }
