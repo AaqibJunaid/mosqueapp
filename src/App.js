@@ -83,22 +83,22 @@ export default class MainApp extends Component {
  
     var displayTime = this.nextPrayerTimeDifference(nextPrayer)
 
-    // if(switchToArabic){
-    //   var arabicName;
+    if(this.state.switchToArabic){
+      var arabicName;
 
-    //   for (var i=0;i<PrayerNames.length;i++){
-    //     if (PrayerNames[i]==nextPrayerName){
-    //       arabicName = arabicPrayerNames[i]
-    //       break;
-    //     }
-    //   }
-    //   document.getElementById('NextPrayerNameLabel').style.fontSize= '2.5vw'  
-    //   document.getElementById('NextPrayerNameLabel').innerText= arabicName
-    // }
-    // else{
+      for (var i=0;i<this.state.PrayerNames.length;i++){
+        if (this.state.PrayerNames[i]==nextPrayerName){
+          arabicName = this.state.arabicPrayerNames[i]
+          break;
+        }
+      }
+      document.getElementById('NextPrayerNameLabel').style.fontSize= '2.5vw'  
+      document.getElementById('NextPrayerNameLabel').innerText= arabicName
+    }
+    else{
       document.getElementById('NextPrayerNameLabel').innerText= nextPrayerName  
       document.getElementById('NextPrayerNameLabel').style.fontSize= '2.85vw'  
-    // }
+    }
     document.getElementById('NextPrayerTypeLabel').innerText=nextPrayerType +' in'
     document.getElementById('NextPrayerTimeLabel').innerText=displayTime
   }
@@ -150,13 +150,13 @@ export default class MainApp extends Component {
       document.getElementById('NextPrayerArea').style.display='none'
       document.getElementById('DateTimeArea').style.display='flex'
       document.getElementById('Time').innerText=hours+ ':' +minutes
-      // if (switchToArabic){
-      //document.getElementById('Date').innerText=getIslamicDate()
-      //document.getElementById('Date').style.fontSize='1.3vw'
+      // if (this.state.switchToArabic){
+      //   document.getElementById('Date').innerText=this.getIslamicDate()
+      //   document.getElementById('Date').style.fontSize='1.3vw'
       // }
       // else{
-      document.getElementById('Date').innerText=this.getLongDate()
-      document.getElementById('Date').style.fontSize='1.7vw'
+        document.getElementById('Date').innerText=this.getLongDate()
+        document.getElementById('Date').style.fontSize='1.7vw'
       // }
       this.setState({dynamicSwitchCounter:this.state.dynamicSwitchCounter+1})
       //will force switch to prayer countdown if needed
@@ -192,6 +192,25 @@ export default class MainApp extends Component {
       else{
         this.setState({currentDynamicArea:'ClockDate'})
       }
+    }
+  }
+
+  updateLanguage(){
+    if (this.state.switchToArabic==true){
+      for (var i=0;i<this.state.PrayerNames.length;i++){
+        document.getElementById(this.state.PrayerNames[i]+'LabelText').innerText=this.state.arabicPrayerNames[i]
+      }
+    }
+    else{
+      this.state.PrayerNames.forEach(function (prayer){
+      document.getElementById(prayer+'LabelText').innerText=prayer
+      })
+    }
+    if(this.state.languageSwitchCouter==this.state.arabicSwitchMax){
+      this.setState({switchToArabic:!this.state.switchToArabic,languageSwitchCouter:0})
+    }
+    else{
+      this.setState({languageSwitchCouter:this.state.languageSwitchCouter+1})
     }
   }
 
@@ -432,6 +451,7 @@ export default class MainApp extends Component {
 
   componentDidMount(){
     this.interval = setInterval(() => this.updatePrayerList(), 1000);
+    this.interval = setInterval(() => this.updateLanguage(), 1000);
   }
 
   render(){
